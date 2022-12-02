@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package abstractdemo;
+
+/**
+ *
+ * @author Student
+ */
+abstract class Animal{
+    public abstract void sound();
+    public abstract void eat();
+
+    void move(){
+        System.out.println("I can move!!");
+    }
+}
+class Dog extends Animal{
+
+    
+    public void sound() {
+        System.out.println("Bark!!");
+    }
+
+    
+    public void eat() {
+        System.out.println("chicken!!");
+    }
+
+}
+class Lion extends Animal{
+
+   
+    public void sound() {
+        System.out.println("Roar!!");
+    }
+
+   
+    public void eat() {
+        System.out.println("Deer!!");
+    }
+}
+abstract class Human extends Animal{
+    abstract void study();
+    public void eat() {
+        System.out.println("Deer!!");
+    }
+}
+class Male extends Human{
+
+    
+    void study() {
+
+    }
+
+    
+    public void sound() {
+
+    }
+
+}
+public class AbstractDemo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Dog dog1=new Dog();
+        dog1.sound();
+        dog1.eat();
+        
+        Lion lion1=new Lion();
+        lion1.sound();
+        lion1.eat();
+    }
+    
+}

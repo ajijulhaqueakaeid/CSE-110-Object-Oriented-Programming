@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package inheritancedemo;
+
+/**
+ *
+ * @author Student
+ */
+
+class Animal{
+    public boolean breathe = true;
+    void eat(){
+        System.out.println("I love food!");
+    }
+}
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Barking..!!");
+    }
+}
+class Cat extends Animal{
+    void meow(){
+        System.out.println("Meowing..!!");
+    }
+}
+class AmericanCat extends Cat{
+    int shorthair;
+    void getShortHair(){
+        System.out.println("My hair is too shortand and size is: "+shorthair);
+    }
+}
+
+public class InheritanceDemo {
+ 
+    public static void main(String[] args) {
+        Animal anim =new Animal();
+        anim.eat();
+        System.out.println("anim.breathe");
+        
+        Dog dog1 = new Dog();
+        
+        dog1.eat();
+        dog1.bark();
+        System.out.println(dog1.breathe);
+        
+        Cat cat1 = new Cat();
+        cat1.eat();
+        cat1.meow();
+        System.out.println(cat1.breathe);
+        
+        AmericanCat americanCat = new AmericanCat();
+        americanCat.eat();
+        americanCat.meow();
+        americanCat.shorthair= 10;
+        System.out.println(americanCat.breathe);
+        System.out.println(americanCat.shorthair);
+        americanCat.getShortHair();
+    }
+    
+}

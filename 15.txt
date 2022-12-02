@@ -1,0 +1,22 @@
+
+package sumofdigits;
+
+import java.util.Scanner;
+
+public class SumofDigits {
+
+  
+    public static void main(String[] args) {
+        int a,b,result=0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input an integer: ");
+        a = in.nextInt();
+        while(a>0){
+            b = a%10;
+            result=result+b;
+            a= a / 10;
+        }
+        System.out.println("The sum of the digits is: "+result);
+    }
+    
+}

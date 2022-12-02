@@ -1,0 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package print.hello.and.then.print.your.name.on.a.separate.line;
+
+/**
+ *
+ * @author Student
+ */
+public class PrintHelloAndThenPrintYourNameOnASeparateLine {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       System.out.println( "Hello ");
+       System.out.print( "My Name Is Akaeid ");
+    }
+    
+}

@@ -1,0 +1,98 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package icecremedemo;
+
+/**
+ *
+ * @author Student
+ */
+ class Icecream{
+    private String icecreamType;
+    private String icecreamCompany;
+    private double icecreamPrice;
+    int id =2019260040;
+    Icecream(){
+   
+        this.icecreamPrice = 0;
+    }
+    Icecream(String icecreamType, String icecreamCompany, double icecreamPrice){
+        this.icecreamType = icecreamType;
+        this.icecreamCompany = icecreamCompany;
+        this.icecreamPrice = icecreamPrice;
+        
+    }
+   public String toString(){
+       return this.icecreamType +" " +this.icecreamCompany + "  " + this.icecreamPrice;
+   }
+   
+   String getIcecreamType(){
+       return this.icecreamType; 
+   }
+   void setIcecreamType(String icecreamType){
+       this.icecreamType = icecreamType;
+   }
+   String getIcecreamCompany(){
+       return this.icecreamCompany; 
+   }
+   void setIcecreamCompany(String icecreamCompany){
+       this.icecreamCompany = icecreamCompany;
+   }
+   double getIcecreamPrice(){
+       return this.icecreamPrice; 
+   }
+   void setIcecreamPrice(double icecreamPrice){
+       this.icecreamPrice = icecreamPrice;
+   }
+  boolean equals(Icecream I){
+      if(this.icecreamPrice==I.icecreamPrice){
+          return true;
+      }else
+          return false;
+  }
+  int compareTo(Icecream I){
+      if(this.icecreamPrice==I.icecreamPrice){
+          return 0;
+      }else if(this.icecreamPrice > I.icecreamPrice){
+          return 1;
+      }else
+          return -1;
+  }
+   
+}
+public class IcecremeDemo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Icecream[] icecreamArray = new Icecream[10];
+        icecreamArray[0] = new Icecream("a","b",1);
+        icecreamArray[1] = new Icecream();
+        icecreamArray[1].setIcecreamType(icecreamType);
+        icecreamArray[1].setIcecreamCompany(icecreamCompany);
+        icecreamArray[1].setIcecreamPrice(0);
+        Icecream icecream1 = new Icecream();
+        Icecream icecream2 = new Icecream("Normal", "Poler", 100);
+        //icecream1.icecreamType = "Cone";
+        //icecream1.icecreamCompany = "Quality";
+        //icecream1.icecreamPrice = 200;
+        icecream1.setIcecreamType("Poler265");
+        icecream1.setIcecreamCompany("poler");
+        icecream1.setIcecreamPrice(200);
+        System.out.println(icecream1.id);
+        System.out.println(icecream1.toString().toUpperCase());
+        System.out.println(icecream2.toString().toUpperCase());
+        System.out.println(icecream1.getIcecreamType());
+        System.out.println(icecream1.getIcecreamCompany());
+        System.out.println(icecream1.getIcecreamPrice());
+        
+        System.out.println(icecream1.equals(icecream2));
+        System.out.println(icecream2.equals(icecream1));
+        System.out.println(icecream1.compareTo(icecream2));
+        System.out.println(icecream2.compareTo(icecream1));
+    } 
+}

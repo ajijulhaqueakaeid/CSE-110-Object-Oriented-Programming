@@ -1,0 +1,27 @@
+
+package commondigit;
+
+import java.util.Scanner;
+
+public class CommonDigit {
+
+    public static void main(String[] args) {
+        int a,b,x = 0,y = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter two numbers from 25 to 75: ");
+        System.out.print("Input the first number: ");
+        a = in.nextInt();
+        System.out.print("Input the second number: ");
+        b = in.nextInt();
+        while(a>25&&b<75){
+            x = a%10;
+            y = b%10;
+            a = a/10;
+            b = b/10;
+        }
+        System.out.println((a==b)||(a==x)||(a==y)||(b==x)||(b==y)||(x==y));
+     
+        
+    }
+    
+}

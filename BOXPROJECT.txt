@@ -1,0 +1,81 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package boxdemo;
+
+/**
+ *
+ * @author Student
+ */
+
+class Box{
+         double width;
+         double height;
+         double depth;
+    
+    
+    void myBox(){
+         width = 1;
+         height = 1;
+         depth = 1;
+}
+    void myBox(double width,double height,double depth){
+         this.width = width;
+         this.height = height;
+         this.depth = depth;
+    }
+    void myBox(double length){
+            this.width = width;
+            this.height = height;
+            this.depth = depth;
+    
+    }
+    void myBox(Box boxobject){
+            this.width = boxobject.width;
+            this.height = boxobject.height;
+            this.depth = boxobject.depth;
+    
+    }
+    void printBoxInfo(){
+            System.out.println("The width of the box is : "+this.width);
+            System.out.println("The height of the box is : "+this.height);
+            System.out.println("The depth of the box is : "+this.depth);
+    
+    }
+    
+    
+}
+
+
+public class BoxDemo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+            Box box1=new Box();
+            box1.printBoxInfo();
+            
+            box1.myBox();
+            box1.printBoxInfo();
+    
+            Box box2=new Box();
+            box2.myBox(10, 20, 30);
+            box2.printBoxInfo();   
+    
+            Box box3=new Box();
+            box3.myBox(10);
+            box3.printBoxInfo();  
+            
+            Box box4=new Box();
+            box4.myBox(box3);
+            box4.printBoxInfo();
+            
+            
+            
+    }
+    
+}

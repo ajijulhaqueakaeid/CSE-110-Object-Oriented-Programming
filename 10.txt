@@ -1,0 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package spring2020;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Student
+ */
+public class Lab110 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        double r;
+        System.out.print("Radius: ");
+        r=in.nextDouble();
+        System.out.println("Perimeter is = "+(2*3.14159*r));
+        System.out.println("Area is = "+(3.14159*r*r));
+    }
+    
+}

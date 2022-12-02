@@ -1,0 +1,72 @@
+
+package accountdemo;
+
+class Account{
+    private int id;
+    private double balance;
+    private double annualInterestRate;
+    
+    Account(){
+        
+    }
+    
+    Account( int id, double balance, double annualInterestRate){
+        this.id = id;
+        this.balance = balance;
+        this.annualInterestRate = annualInterestRate;
+        
+    }
+    
+    int getId(){
+       return this.id; 
+    }
+    void setId(int id){
+         this.id = id;
+    }
+    double getBalance(){
+        return this.balance;
+    }
+    
+    void setBalance (double balance){
+        this.balance = balance;
+    }
+    double getAnnualInterestRate(){
+        return this.annualInterestRate;
+    }
+    void setAnnualInterestRate( double annualInterestRate){
+        this.annualInterestRate = annualInterestRate;
+    }
+    
+    public String toString(){
+        return "ID: "+this.id
+                +"\nBalance: "+this.balance
+                +"\nAnnualInterestRate: "+this.annualInterestRate;
+    }
+    double getMonthlyInterestRate( double annualInterestRate){
+        double monthlyinterest = (annualInterestRate/12)/100;
+        return monthlyinterest;
+    }
+    double getMonthlyInterestAmount(double balance, double monthlyinterest){
+        return balance * monthlyinterest ;
+    }
+    
+    double withdraws ( double balance){
+       return this.balance -= balance;
+    }
+    
+    double deposit(double balance){
+        return this.balance += balance;
+    }
+}
+
+public class AccountDemo {
+
+    
+    public static void main(String[] args) {
+        Account ac = new Account(1122, 20000, 4.5);
+        System.out.println("Withdraw: "+ac.withdraws(2500));
+        System.out.println("Deposit: "+ac.deposit(3000));
+        System.out.println(ac.toString());
+    }
+    
+}

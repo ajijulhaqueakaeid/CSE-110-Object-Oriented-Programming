@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package atm;
+
+/**
+ *
+ * @author Student
+ */
+class Account {
+
+    private int id;
+    private double balance;
+    private double annualInterestRate;
+
+    Account() {
+
+    }
+
+    Account(int id, double balance, double annualInterestRate) {
+        this.id = id;
+        this.balance = balance;
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    int getId() {
+        return this.id;
+    }
+
+    void setId(int id) {
+        this.id = id;
+    }
+
+    double getBalance() {
+        return this.balance;
+    }
+
+    void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    double getAnnualInterestRate() {
+        return this.annualInterestRate;
+    }
+
+    void setAnnualInterestRate(double annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    public String toString() {
+        return; 
+    }
+
+}
+
+public class ATM {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+
+}
